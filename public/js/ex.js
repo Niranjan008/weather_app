@@ -1,0 +1,1 @@
+console.log('Vanakkam da mapla Javascript la irundhu')

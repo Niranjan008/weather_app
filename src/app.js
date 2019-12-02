@@ -6,6 +6,7 @@ const geocode = require('./geocode.js')
 const app = express()
 const parpath = path.join(__dirname,'/partials')
 const pubpath = path.join(__dirname,'/public')
+const port = process.env.PORT || 3000
 app.use(express.static(pubpath))
 hbs.registerPartials(parpath)
 app.set('view engine','hbs')
@@ -43,6 +44,6 @@ app.get('/contact',(req,res) => {
 app.get('*',(req,res) => {
     res.render('404')
 })
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('ho')
 })
